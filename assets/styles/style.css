@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Audiowide");
+body {
+  background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/V3GIUd5/lights-across-tiled-background-loop-blue_e1bqsgb9__F0000.png);
+  background-size: cover;
+}
+
+.jumbotron {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn {
+  margin: 10px 10px 10px 0px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-top: 5%;
+  font-family: "Audiowide", cursive;
+  font-size: 5rem;
+}
