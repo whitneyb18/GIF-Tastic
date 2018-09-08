@@ -1,8 +1,8 @@
 var presetButtons = [
-  "Tina Turner",
-  "Michael Jackson",
-  "Cyndi Laupner",
-  "Bon Jovi"
+  "The Breakfast Club",
+  "Ferris Buller's Day Off",
+  "Back to the Future",
+  "Pretty in Pink"
 ];
 
 function renderButtons() {
