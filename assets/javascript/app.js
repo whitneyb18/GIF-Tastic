@@ -21,7 +21,7 @@ function displayGifs() {
   var queryURL =
     "http://api.giphy.com/v1/gifs/search?q=" +
     yourSearch +
-    "&limit=10&api_key=jkkfvmGPOCF7pMALWDXDcKaaUqRtla0W";
+    "&limit=10&rating=g&rating=pg&api_key=jkkfvmGPOCF7pMALWDXDcKaaUqRtla0W";
   $.ajax({
     url: queryURL,
     method: "GET"
