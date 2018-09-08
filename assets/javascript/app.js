@@ -26,10 +26,20 @@ function displayGifs() {
     url: queryURL,
     method: "GET"
   }).then(function(yourSearch) {
-    console.log(yourSearch.data[0].images);
     for (i = 0; i < 5; i++) {
+      console.log(yourSearch);
       var newImg = $("<img>");
+      newImg.addClass("yourGif");
       newImg.attr("src", yourSearch.data[i].images.fixed_height.url);
+      newImg.attr("data-animate", yourSearch.data[i].images.fixed_height.url);
+      newImg.attr(
+        "data-still",
+        yourSearch.data[i].images.fixed_height_still.url
+      );
+      newImg.attr("data-state", "animate");
+      var imgRating = $("<p>");
+      $(imgRating).text("Rating: " + yourSearch.data[i].rating);
+      $("#gifDump").prepend(imgRating);
       $("#gifDump").prepend(newImg);
     }
   });
@@ -45,3 +55,14 @@ $("#grabThatGif").on("click", function() {
 });
 
 $(document).on("click", ".eighties", displayGifs);
+
+$(document).on("click", ".yourGif", function() {
+  var state = $(this).attr("data-state");
+  if (state === "animate") {
+    $(this).attr("src", $(this).attr("data-still"));
+    $(this).attr("data-state", "still");
+  } else {
+    $(this).attr("src", $(this).attr("data-animate"));
+    $(this).attr("data-state", "animate");
+  }
+});
