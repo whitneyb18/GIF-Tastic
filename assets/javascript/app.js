@@ -19,7 +19,7 @@ function renderButtons() {
 function displayGifs() {
   var yourSearch = $(this).attr("data-name");
   var queryURL =
-    "http://api.giphy.com/v1/gifs/search?q=" +
+    "https://api.giphy.com/v1/gifs/search?q=" +
     yourSearch +
     "&limit=10&rating=g&rating=pg&api_key=jkkfvmGPOCF7pMALWDXDcKaaUqRtla0W";
   $.ajax({
